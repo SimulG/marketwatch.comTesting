@@ -6,6 +6,7 @@ using System.Threading;
 
 namespace Framework
 {
+    // chrome driver settings
     public class Driver
     {
         private static IWebDriver driver;
@@ -41,7 +42,16 @@ namespace Framework
         {
             Thread.Sleep(x);
         }
-        public static void closeDriver()
+        public static void switchFrameID(string id)
+        {
+            driver.SwitchTo().Frame(driver.FindElement(By.Id(id)));
+        }
+        public static void switchFrameDefault()
+        {
+            driver.SwitchTo().DefaultContent();
+        }
+
+            public static void closeDriver()
         {
             driver.Quit();
         }

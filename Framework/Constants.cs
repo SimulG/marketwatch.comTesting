@@ -1,7 +1,8 @@
 ﻿namespace Framework
 {
-    internal class Constants
+    public class Constants
     {
+        // webpage urls
         public class Urls
         {
             public class MarketWatch
