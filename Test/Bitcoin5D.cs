@@ -30,9 +30,9 @@ namespace Test
             Assert.IsTrue(Convert.ToDouble(preformance5D) > 0);
         }
         [Test]
-        public static void fiveDayPreformanceSecondAproachNegative()
+        public static void fiveDayPreformanceSecondAproachPositive()
         {
-            //expected result: Less than 0 (x < 0)
+            //expected result: More than 0 (x > 0)
             string preformance5D = string.Empty;
 
             MainPage.clickAcceptCoockies();
@@ -41,7 +41,7 @@ namespace Test
             preformance5D = (string)MainPage.checkPreformance5D();
             preformance5D = preformance5D.Remove(preformance5D.Length - 1);
 
-            Assert.IsTrue(Convert.ToDouble(preformance5D) < 0);
+            Assert.IsTrue(Convert.ToDouble(preformance5D) > 0);
         }
 
     }
