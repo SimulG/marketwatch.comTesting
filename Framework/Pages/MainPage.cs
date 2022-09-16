@@ -1,7 +1,4 @@
-﻿using OpenQA.Selenium;
-using System;
-
-namespace Framework.Pages
+﻿namespace Framework.Pages
 {
     public class MainPage
     {
@@ -20,9 +17,19 @@ namespace Framework.Pages
             Driver.switchFrameDefault();
         }
 
+        public static void clickBitcoin()
+        {
+            Common.click("//a[contains(text(),'Bitcoin USD')]");
+        }
+
         public static void clickBitcoinUSD()
         {
-            Common.click("/html/body/main/div/div[2]/div[2]/div[1]/div[1]/div/table/tbody/tr[1]/td[2]/a/span");
+            Common.click("//tr[1]/td[2]/a/span[contains(text(),\"BTCUSD\")]");
+        }
+
+        public static void clickCrypto()
+        {
+            Common.click("//ul/li[7]/a[contains(text(),'Crypto')]");
         }
 
         public static void clickSearchButton()

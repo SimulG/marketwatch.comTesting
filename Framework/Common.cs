@@ -20,6 +20,11 @@ namespace Framework
         {
             getElement(locator).Click();
         }
+        internal static string getElementAttribute(string locator)
+        {
+            string element;
+            return element = getElement(locator).GetAttribute("alt");
+        }
         internal static string getElementText(string locator)
         {
             return getElement(locator).Text;
