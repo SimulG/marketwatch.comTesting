@@ -8,7 +8,7 @@
             return Common.getElementText(locator);
         }
 
-        public static void clickAcceptCoockies()
+        public static void clickAcceptCookies()
         {
             //"sp_message_iframe_524529"
             Driver.wait(10);

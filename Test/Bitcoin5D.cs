@@ -12,6 +12,7 @@ namespace Test
         public static void Preparation()
         {
             Driver.open($"{Constants.Urls.MarketWatch.Domain}");
+            MainPage.clickAcceptCookies();
         }
         [Test]
         public static void fiveDayPreformancePositive()
@@ -19,7 +20,6 @@ namespace Test
             //expected result: More than 0 (x > 0)
             string preformance5D = string.Empty;
 
-            MainPage.clickAcceptCoockies();
             MainPage.clickSearchButton();
             MainPage.enterTextBitcoin();
             MainPage.clickSearchSecondButton();
@@ -35,7 +35,6 @@ namespace Test
             //expected result: More than 0 (x > 0)
             string preformance5D = string.Empty;
 
-            MainPage.clickAcceptCoockies();
             MainPage.clickCrypto();
             MainPage.clickBitcoin();
             preformance5D = (string)MainPage.checkPreformance5D();
